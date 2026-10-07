@@ -1,0 +1,254 @@
+/* Simple, clean news-app styling. One accent color, system fonts, no
+   frameworks -- deliberately plain since this is just a demo of the API,
+   not the real product design. */
+
+:root {
+  --accent: #2563eb;
+  --text: #1a1a1a;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --bg: #ffffff;
+  --bg-muted: #f3f4f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 32px 16px;
+  background: #e5e7eb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* The "phone": a fixed-width frame so the page reads as a mobile screen
+   rather than a regular website, even though it's just HTML in a browser
+   tab. */
+.phone {
+  width: 390px;
+  max-width: 100%;
+  height: 780px;
+  background: #000;
+  border-radius: 40px;
+  padding: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  padding: 18px 16px 8px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.search-bar {
+  padding: 10px 16px;
+  flex-shrink: 0;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-muted);
+  font-size: 14px;
+}
+
+.section-tabs {
+  display: flex;
+  gap: 8px;
+  padding: 0 16px 10px;
+  overflow-x: auto;
+  flex-shrink: 0;
+}
+
+/* `.section-tabs { display: flex }` above and the browser's built-in
+   `[hidden] { display: none }` rule have equal CSS specificity, so without
+   this, setting `sectionTabsEl.hidden = true` in app.js would silently do
+   nothing -- the flex rule would keep winning. */
+.section-tabs[hidden] {
+  display: none;
+}
+
+.section-tabs button {
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.section-tabs button.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.view {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 16px 16px;
+}
+
+.article-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--bg);
+  text-align: left;
+  padding: 0;
+}
+
+.article-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  background: var(--bg-muted);
+  display: block;
+}
+
+.article-card .card-body {
+  padding: 10px 12px 12px;
+}
+
+.section-label {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.article-card h2 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.article-card .excerpt {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.byline {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.status {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+  padding: 16px 0;
+}
+
+.status.error {
+  color: #b91c1c;
+}
+
+.load-more {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--accent);
+  background: var(--bg);
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.load-more[hidden] {
+  display: none;
+}
+
+.back-btn {
+  border: none;
+  background: none;
+  color: var(--accent);
+  font-size: 14px;
+  padding: 4px 0 12px;
+  cursor: pointer;
+}
+
+.article-detail .section-label {
+  display: block;
+}
+
+.article-detail h1 {
+  font-size: 20px;
+  margin: 4px 0 8px;
+  line-height: 1.3;
+}
+
+.article-detail .byline {
+  margin-bottom: 14px;
+}
+
+.article-detail img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.article-detail .body-text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.article-detail .body-text p {
+  margin: 0 0 12px;
+}
+
+.unofficial-note {
+  max-width: 390px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 12px;
+  margin-top: 16px;
+}

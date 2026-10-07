@@ -1,0 +1,25 @@
+{
+  "id": 484555,
+  "date": "2026-10-07T00:00:58",
+  "link": "https://dailytarheel.com/484555/games/mini-86/",
+  "title": { "rendered": "Mini #86" },
+  "content": { "rendered": "<div class='infographicwidget'><iframe src='x'></iframe></div>" },
+  "excerpt": { "rendered": "" },
+  "_links": {
+    "wp:term": [
+      { "taxonomy": "category" },
+      { "taxonomy": "staff_name" }
+    ]
+  },
+  "_embedded": {
+    "wp:term": [
+      [
+        { "id": 19998, "name": "weight-9", "slug": "weight-9", "taxonomy": "category" },
+        { "id": 7231, "name": "Games", "slug": "games", "taxonomy": "category" }
+      ],
+      [
+        { "id": 20166, "name": "Olivia Wang", "slug": "olivia-wang", "taxonomy": "staff_name" }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DTH App Preview</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!--
+    Everything below is a static, framework-free demo of what a mobile app
+    built on top of this backend could look like. It exists only to show
+    the API working end to end -- the real app will be native SwiftUI, not
+    this page. See static/app.js for how each screen talks to the backend.
+  -->
+  <div class="phone">
+    <div class="screen">
+
+      <header class="app-header">
+        <h1>DTH App Preview</h1>
+      </header>
+
+      <form id="search-form" class="search-bar">
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Search articles"
+          aria-label="Search articles"
+        />
+      </form>
+
+      <nav id="section-tabs" class="section-tabs" aria-label="Sections">
+        <!-- Filled in by app.js from GET /sections -->
+      </nav>
+
+      <!-- Screen 1: the scrolling home feed -->
+      <main id="feed-view" class="view">
+        <ul id="article-list" class="article-list"></ul>
+        <p id="feed-status" class="status"></p>
+        <button id="load-more-btn" class="load-more" hidden>Load more</button>
+      </main>
+
+      <!-- Screen 2: a single open article. Hidden until a card is tapped. -->
+      <main id="article-view" class="view" hidden>
+        <button id="back-btn" class="back-btn">&larr; Back</button>
+        <div id="article-content"></div>
+      </main>
+
+    </div>
+  </div>
+
+  <p class="unofficial-note">
+    Unofficial prototype built against The Daily Tar Heel's public WordPress
+    API. Not affiliated with or endorsed by The Daily Tar Heel.
+  </p>
+
+  <script>
+    // Leave this empty when the page is served by the FastAPI app itself
+    // (it then calls the API on the same origin, e.g. /articles). Set it
+    // to the deployed backend's URL when this page is hosted separately
+    // from the API -- e.g. this file on Vercel, the API on Render.
+    window.API_BASE_URL = "";
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

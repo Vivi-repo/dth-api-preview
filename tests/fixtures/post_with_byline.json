@@ -1,0 +1,37 @@
+{
+  "id": 484610,
+  "date": "2026-09-30T14:10:00",
+  "link": "https://dailytarheel.com/484610/university/faith-hedgepeth-office/two-more-alternate-jurors/",
+  "title": { "rendered": "Two more alternate jurors finalized" },
+  "content": {
+    "rendered": "<p><span style=\"font-weight: 400;\">The trial continued Tuesday.</span></p><script>trackEvent();</script>"
+  },
+  "excerpt": {
+    "rendered": "<p>The defense and prosecution have selected three of the four required alternate jurors.</p>"
+  },
+  "_links": {
+    "wp:term": [
+      { "taxonomy": "category" },
+      { "taxonomy": "post_tag" },
+      { "taxonomy": "staff_name" }
+    ]
+  },
+  "_embedded": {
+    "wp:term": [
+      [
+        { "id": 20120, "name": "Faith Hedgepeth Trial", "slug": "faith-hedgepeth-office", "taxonomy": "category" },
+        { "id": 6951, "name": "University", "slug": "university", "taxonomy": "category" },
+        { "id": 19900, "name": "weight-3", "slug": "weight-3", "taxonomy": "category" }
+      ],
+      [],
+      [
+        { "id": 14900, "name": "Mary Stevens", "slug": "mary-stevens", "taxonomy": "staff_name" }
+      ]
+    ],
+    "wp:featuredmedia": [
+      {
+        "source_url": "https://dailytarheel.com/wp-content/uploads/2026/09/courthouse.jpg"
+      }
+    ]
+  }
+}

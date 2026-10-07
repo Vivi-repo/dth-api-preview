@@ -1,0 +1,6 @@
+[
+  { "id": 6962, "name": "Sports", "slug": "sports", "parent": 0, "count": 15587 },
+  { "id": 6983, "name": "Opinion", "slug": "opinion", "parent": 0, "count": 10210 },
+  { "id": 19900, "name": "weight-3", "slug": "weight-3", "parent": 0, "count": 70 },
+  { "id": 6964, "name": "Men's Basketball", "slug": "mens-basketball", "parent": 6962, "count": 2610 }
+]
